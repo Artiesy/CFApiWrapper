@@ -26,7 +26,7 @@ public class RequestManager {
 
 
     public static CFResponse makeRequest(CFRequest request) throws Exception {
-        if(apiKey == null && !baseUrl.equals("https://api.curseforge.com")) throw new Exception("Api Key not specified");
+        if(apiKey == null && baseUrl.equals("https://api.curseforge.com")) throw new Exception("Api Key not specified");
 
         URL obj = new URL(baseUrl + request.route);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
