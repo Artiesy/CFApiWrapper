@@ -125,7 +125,7 @@ public class Routes {
             throw new Exception("searchParams cannot be null. If you want to exclude params, " +
                                 "create empty object and pass it to this method");
 
-        CFRequest request = new CFRequest("/v1/categories?gameId=" + gameId + searchParams.getQuery(), CFRequest.RequestMethod.GET);
+        CFRequest request = new CFRequest("/v1/mods/search?gameId=" + gameId + searchParams.getQuery(), CFRequest.RequestMethod.GET);
         CFResponse response = RequestManager.makeRequest(request);
 
         return response.getResponse(SearchModsResponse.class);
