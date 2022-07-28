@@ -12,12 +12,18 @@ public class RequestManager {
     private static String baseUrl = "https://api.curseforge.com";
     private static String apiKey = null;
 
+    private static boolean logging = false;
+
     public static void setBaseUrl(String url) {
         baseUrl = url;
     }
 
     public static String getBaseUrl() {
         return baseUrl;
+    }
+
+    public static void useLogger(boolean use) {
+        logging = use;
     }
 
     public static void useApiKey(String key) {
@@ -29,6 +35,11 @@ public class RequestManager {
         if(apiKey == null && baseUrl.equals("https://api.curseforge.com")) throw new Exception("Api Key not specified");
 
         URL obj = new URL(baseUrl + request.route);
+
+        if(logging) System.out.println("[CF] Request made: " + baseUrl + request.route);
+        if(request.method == CFRequest.RequestMethod.POST) System.out.println("[CF] Request body: " + request.body);
+
+
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
         con.setRequestProperty("x-api-key", apiKey);

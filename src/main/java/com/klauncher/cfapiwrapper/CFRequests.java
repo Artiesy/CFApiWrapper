@@ -9,7 +9,7 @@ import com.klauncher.cfapiwrapper.schemas.requests.*;
 import com.klauncher.cfapiwrapper.schemas.responses.*;
 import com.klauncher.cfapiwrapper.util.*;
 
-public class Routes {
+public class CFRequests {
 
     /**
      * Get all games that are available to the provided API key
@@ -343,7 +343,6 @@ public class Routes {
 
         return response.getResponse(ApiResponseOfListOfMinecraftModLoaderIndex.class);
     }
-
 
     /**
      * Get Minecraft ModLoaders

@@ -1,8 +1,7 @@
-import com.klauncher.cfapiwrapper.Routes;
+import com.klauncher.cfapiwrapper.CFRequests;
 import com.klauncher.cfapiwrapper.schemas.*;
 import com.klauncher.cfapiwrapper.schemas.requests.*;
 import com.klauncher.cfapiwrapper.schemas.responses.*;
-import com.klauncher.cfapiwrapper.util.CFRequest;
 import com.klauncher.cfapiwrapper.util.ModFileParams;
 import com.klauncher.cfapiwrapper.util.ModsSearchParams;
 import com.klauncher.cfapiwrapper.util.RequestManager;
@@ -43,31 +42,31 @@ public class MainTest {
         ffmrb.fingerprints.add(new FolderFingerprint());
 
 
-        Assertions.assertInstanceOf(GetGamesResponse.class, Routes.getGames());
-        Assertions.assertInstanceOf(GetGameResponse.class, Routes.getGame(gameId));
-        Assertions.assertInstanceOf(GetVersionsResponse.class, Routes.getVersions(gameId));
-        Assertions.assertInstanceOf(GetVersionTypesResponse.class, Routes.getVersionTypes(gameId));
-        Assertions.assertInstanceOf(GetCategoriesResponse.class, Routes.getCategories(gameId));
-        Assertions.assertInstanceOf(SearchModsResponse.class, Routes.searchMods(gameId, new ModsSearchParams()));
-        Assertions.assertInstanceOf(GetModResponse.class, Routes.getMod(modId));
-        Assertions.assertInstanceOf(GetModsResponse.class, Routes.getMods(b));
+        Assertions.assertInstanceOf(GetGamesResponse.class, CFRequests.getGames());
+        Assertions.assertInstanceOf(GetGameResponse.class, CFRequests.getGame(gameId));
+        Assertions.assertInstanceOf(GetVersionsResponse.class, CFRequests.getVersions(gameId));
+        Assertions.assertInstanceOf(GetVersionTypesResponse.class, CFRequests.getVersionTypes(gameId));
+        Assertions.assertInstanceOf(GetCategoriesResponse.class, CFRequests.getCategories(gameId));
+        Assertions.assertInstanceOf(SearchModsResponse.class, CFRequests.searchMods(gameId, new ModsSearchParams()));
+        Assertions.assertInstanceOf(GetModResponse.class, CFRequests.getMod(modId));
+        Assertions.assertInstanceOf(GetModsResponse.class, CFRequests.getMods(b));
         Assertions.assertInstanceOf(
                 GetFeaturedModsResponse.class,
-                Routes.getFeaturedMods(new GetFeaturedModsRequestBody(gameId, null, 1)));
-        Assertions.assertInstanceOf(String.class, Routes.getModDescription(modId));
-        Assertions.assertInstanceOf(GetModFilesResponse.class, Routes.getModFiles(modId, new ModFileParams()));
-        Assertions.assertInstanceOf(GetModFileResponse.class, Routes.getModFile(modId, fileId));
-        Assertions.assertInstanceOf(GetFilesResponse.class, Routes.getFiles(mfrb));
-        Assertions.assertInstanceOf(String.class, Routes.getModFileChangelog(modId, fileId));
-        Assertions.assertInstanceOf(String.class, Routes.getModFileDownloadURL(modId, fileId));
+                CFRequests.getFeaturedMods(new GetFeaturedModsRequestBody(gameId, null, 1)));
+        Assertions.assertInstanceOf(String.class, CFRequests.getModDescription(modId));
+        Assertions.assertInstanceOf(GetModFilesResponse.class, CFRequests.getModFiles(modId, new ModFileParams()));
+        Assertions.assertInstanceOf(GetModFileResponse.class, CFRequests.getModFile(modId, fileId));
+        Assertions.assertInstanceOf(GetFilesResponse.class, CFRequests.getFiles(mfrb));
+        Assertions.assertInstanceOf(String.class, CFRequests.getModFileChangelog(modId, fileId));
+        Assertions.assertInstanceOf(String.class, CFRequests.getModFileDownloadURL(modId, fileId));
 
-        Assertions.assertInstanceOf(GetFingerprintMatchesResponse.class, Routes.getFingerprintsMatches(fmrb));
-        Assertions.assertInstanceOf(GetFingerprintsFuzzyMatchesResponse.class, Routes.getFingerprintsFuzzyMatches(ffmrb));
+        Assertions.assertInstanceOf(GetFingerprintMatchesResponse.class, CFRequests.getFingerprintsMatches(fmrb));
+        Assertions.assertInstanceOf(GetFingerprintsFuzzyMatchesResponse.class, CFRequests.getFingerprintsFuzzyMatches(ffmrb));
 
-        Assertions.assertInstanceOf(ApiResponseOfListOfMinecraftGameVersion.class, Routes.getMinecraftVersions());
-        Assertions.assertInstanceOf(ApiResponseOfMinecraftGameVersion.class, Routes.getMinecraftVersion(version));
-        Assertions.assertInstanceOf(ApiResponseOfListOfMinecraftModLoaderIndex.class, Routes.getMinecraftModLoaders());
-        Assertions.assertInstanceOf(ApiResponseOfMinecraftModLoaderVersion.class, Routes.getMinecraftModLoader(""));
+        Assertions.assertInstanceOf(ApiResponseOfListOfMinecraftGameVersion.class, CFRequests.getMinecraftVersions());
+        Assertions.assertInstanceOf(ApiResponseOfMinecraftGameVersion.class, CFRequests.getMinecraftVersion(version));
+        Assertions.assertInstanceOf(ApiResponseOfListOfMinecraftModLoaderIndex.class, CFRequests.getMinecraftModLoaders());
+        Assertions.assertInstanceOf(ApiResponseOfMinecraftModLoaderVersion.class, CFRequests.getMinecraftModLoader(""));
 
         System.out.println("All tests had been passed");
 

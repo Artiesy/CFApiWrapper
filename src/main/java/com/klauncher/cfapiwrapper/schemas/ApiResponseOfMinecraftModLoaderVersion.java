@@ -6,5 +6,5 @@ public class ApiResponseOfMinecraftModLoaderVersion {
     /**
      * The response data
      */
-    public List<MinecraftModLoaderVersion> data;
+    public MinecraftModLoaderVersion data;
 }
