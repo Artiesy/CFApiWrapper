@@ -11,4 +11,4 @@ Unofficial CurseForge API Wrapper, that helps you fetch information from CurseFo
 
 1) Include .jar file to your project
 2) Configure Request Manager to use your API token (if exists) and set (if necessary) alternative base url (default: `https://api.curseforge.com`) using methods `RequestManager.useApiKey(apiKey)` and `RequestManager.setBaseUrl()`
-3) Use `Routes` class with defined methods to fetch data from CurseForge API (the naming of methods are same that they named in documentation, example: getFeaturedMods)
+3) Use `CFRequests` class with defined methods to fetch data from CurseForge API (the naming of methods are same that they named in documentation, example: getFeaturedMods)
