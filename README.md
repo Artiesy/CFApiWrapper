@@ -1,6 +1,8 @@
 # CFApiWrapper
 Unofficial CurseForge API Wrapper, that helps you fetch information from CurseForge
 
+!!! Still in beta (WIP)
+
 ## Features
 - API/Non-API (proxy) usage
 - All schemas from https://docs.curseforge.com/ with route to fetch data
