@@ -1,22 +1,22 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
 
-public enum FileStatus {
 
-    @SerializedName("1") PROCESSING,
-    @SerializedName("2") CHANGES_REQUIRED,
-    @SerializedName("3") UNDER_REVIEW,
-    @SerializedName("4") APPROVED,
-    @SerializedName("5") REJECTED,
-    @SerializedName("6") MALWARE_DETECTED,
-    @SerializedName("7") DELETED,
-    @SerializedName("8") ARCHIVED,
-    @SerializedName("9") TESTING,
-    @SerializedName("10") RELEASED,
-    @SerializedName("11") READY_FOR_REVIEW,
-    @SerializedName("12") DEPRECATED,
-    @SerializedName("13") BAKING,
-    @SerializedName("14") AWAITING_PUBLISHING,
-    @SerializedName("15") FAILED_PUBLISHING
+public class FileStatus {
+
+    public static final int PROCESSING = 1;
+    public static final int CHANGES_REQUIRED = 2;
+    public static final int UNDER_REVIEW = 3;
+    public static final int APPROVED = 4;
+    public static final int REJECTED = 5;
+    public static final int MALWARE_DETECTED = 6;
+    public static final int DELETED = 7;
+    public static final int ARCHIVED = 8;
+    public static final int TESTING = 9;
+    public static final int RELEASED = 10;
+    public static final int READY_FOR_REVIEW = 11;
+    public static final int DEPRECATED = 12;
+    public static final int BAKING = 13;
+    public static final int AWAITING_PUBLISHING = 14;
+    public static final int FAILED_PUBLISHING = 15;
 }

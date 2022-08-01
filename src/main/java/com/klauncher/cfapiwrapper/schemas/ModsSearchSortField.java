@@ -1,15 +1,13 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
+public class ModsSearchSortField {
 
-public enum ModsSearchSortField {
-
-    @SerializedName("1") FEATURED,
-    @SerializedName("2") POPULARITY,
-    @SerializedName("3") LAST_UPDATED,
-    @SerializedName("4") NAME,
-    @SerializedName("5") AUTHOR,
-    @SerializedName("6") TOTAL_DOWNLOADS,
-    @SerializedName("7") CATEGORY,
-    @SerializedName("8") GAME_VERSION
+    public static final int FEATURED = 1;
+    public static final int POPULARITY = 2;
+    public static final int LAST_UPDATED = 3;
+    public static final int NAME = 4;
+    public static final int AUTHOR = 5;
+    public static final int TOTAL_DOWNLOADS = 6;
+    public static final int CATEGORY = 7;
+    public static final int GAME_VERSION = 8;
 }

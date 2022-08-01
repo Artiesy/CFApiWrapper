@@ -1,9 +1,9 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
 
-public enum ModLoaderInstallMethod {
-    @SerializedName("1") FORGE_INSTALLER,
-    @SerializedName("2") FORGE_JAR_INSTALL,
-    @SerializedName("3") FORGE_INSTALLER_V2
+public class ModLoaderInstallMethod {
+
+    public static final int FORGE_INSTALLER = 1;
+    public static final int FORGE_JAR_INSTALL = 2;
+    public static final int  FORGE_INSTALLER_V2 = 3;
 }

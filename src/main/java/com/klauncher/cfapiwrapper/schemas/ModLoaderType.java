@@ -1,14 +1,9 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
 
-public enum ModLoaderType {
 
-    @SerializedName("1") ANY,
-    @SerializedName("1") FORGE,
-    @SerializedName("1") CAULDRON,
-    @SerializedName("1") LITELOADER,
-    @SerializedName("1") FABRIC,
-    @SerializedName("5") QUILT
-
+public class ModLoaderType {
+    public static final int FORGE = 1;
+    public static final int FABRIC = 4;
+    public static final int QUILT = 5;
 }

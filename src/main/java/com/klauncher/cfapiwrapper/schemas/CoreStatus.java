@@ -1,12 +1,12 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
 
-public enum CoreStatus {
-    @SerializedName("1") DRAFT,
-    @SerializedName("2") TEST,
-    @SerializedName("3") PENDING_REVIEW,
-    @SerializedName("4") REJECTED,
-    @SerializedName("5") APPROVED,
-    @SerializedName("6") LIVE
+
+public class CoreStatus {
+    public static final int DRAFT = 1;
+    public static final int TEST = 2;
+    public static final int PENDING_REVIEW = 3;
+    public static final int REJECTED = 4;
+    public static final int APPROVED = 5;
+    public static final int LIVE = 6;
 }

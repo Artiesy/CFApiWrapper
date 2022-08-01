@@ -1,9 +1,9 @@
 package com.klauncher.cfapiwrapper.schemas;
 
-import com.google.gson.annotations.SerializedName;
 
-public enum GameVersionStatus {
-    @SerializedName("1") APPROVED,
-    @SerializedName("2") DELETED,
-    @SerializedName("3") NEW
+
+public class GameVersionStatus {
+    public static final int APPROVED = 1;
+    public static final int DELETED = 2;
+    public static final int NEW = 3;
 }
